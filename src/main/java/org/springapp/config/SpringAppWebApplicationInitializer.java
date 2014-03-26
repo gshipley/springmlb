@@ -13,7 +13,7 @@ public class SpringAppWebApplicationInitializer implements WebApplicationInitial
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
         AnnotationConfigWebApplicationContext webApplicationContext = new AnnotationConfigWebApplicationContext();
-        webApplicationContext.register(ApplicationConfig.class;
+        webApplicationContext.register(ApplicationConfig.class);
 
         Dynamic dynamc = servletContext.addServlet("dispatcherServlet", new DispatcherServlet(webApplicationContext));
         dynamc.addMapping("/api/v1/*");
