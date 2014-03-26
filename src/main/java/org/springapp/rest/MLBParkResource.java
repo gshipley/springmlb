@@ -29,9 +29,7 @@ public class MLBParkResource {
 	}
 	@RequestMapping(value="within", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public @ResponseBody List<MLBPark> findParksWithin(@RequestParam("lat1") float lat1, @RequestParam("lon1") float lon1, @RequestParam("lat2") float lat2, @RequestParam("lon2") float lon2) {
-		Query query = Query.query(Criteria.where("position").within(new Box(new Point(lon2,lat2), new Point(lon1,lat1))));
+		Query query = Query.query(Criteria.where("coordinates").within(new Box(new Point(lon2,lat2), new Point(lon1,lat1))));
 		return mongoTemplate.find(query , MLBPark.class);
-	}
-	
-	
+	}	
 }
