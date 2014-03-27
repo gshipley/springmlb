@@ -12,7 +12,7 @@ public class MLBPark {
 	
 	private String name;
 	@Indexed
-	private double[] position;
+	private double[] coordinates;
 	private String ballpark;
 	private long payroll;
 	private String league;
@@ -28,11 +28,11 @@ public class MLBPark {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public double[] getPosition() {
-		return position;
+	public double[] getCoordinates() {
+		return coordinates;
 	}
-	public void setPosition(double[] position) {
-		this.position = position;
+	public void setCoordinates(double[] coordinates) {
+		this.coordinates = coordinates;
 	}
 	public String getBallpark() {
 		return ballpark;
@@ -51,7 +51,5 @@ public class MLBPark {
 	}
 	public void setLeague(String league) {
 		this.league = league;
-	}
-	
-	
+	}	
 }

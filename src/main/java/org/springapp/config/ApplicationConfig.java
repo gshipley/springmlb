@@ -16,7 +16,7 @@ public class ApplicationConfig {
     public MongoTemplate mongoTemplate() throws Exception {
         String openshiftMongoDbHost = System.getenv("OPENSHIFT_MONGODB_DB_HOST");
         if(openshiftMongoDbHost == null){
-        	return new MongoTemplate(new Mongo(), "mlbparks");
+        	return new MongoTemplate(new Mongo(), "springmlb");
         }
         int openshiftMongoDbPort = Integer.parseInt(System.getenv("OPENSHIFT_MONGODB_DB_PORT"));
         String username = System.getenv("OPENSHIFT_MONGODB_DB_USERNAME");
