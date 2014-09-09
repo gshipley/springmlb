@@ -24,6 +24,7 @@ public class Hog {
 	@RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public @ResponseBody String eatTheMemory() {
 		System.out.println(" java.lang.OutOfMemoryError");
+		System.out.println("java.lang.OutOfMemoryError");
 		return new String("Done....");
 	}	
 	
