@@ -25,7 +25,7 @@ public class Hog {
 	public @ResponseBody String eatTheMemory() {
 		System.out.println(" java.lang.OutOfMemoryError");
 		System.out.println("java.lang.OutOfMemoryError");
-		return new String("Done....");
+		return new String("Done...");
 	}	
 	
 	public void EatMemory() {
